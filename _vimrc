@@ -15,18 +15,19 @@ behave mswin
 """""""""""""""""""""""""""""""""""""""
 "   my settings -- ma_ko@riseup.net   "
 """""""""""""""""""""""""""""""""""""""
-set ai nu noeb ruler sm smd
+set ai nu noeb ruler sm smd sw=4
 set nobackup
+set noundofile
 set showcmd
 set nojoinspaces
 
 set backspace=indent,eol,start
 set listchars=tab:>-,trail:-,eol:$
 set whichwrap=b,s,h,l,<,>,[,]
-set mps=(:),{:},[:],<:>
+"set mps=(:),{:},[:],<:>
 set more
 
-set history=1500
+set history=2500
 set incsearch
 set hls
 
@@ -36,8 +37,9 @@ if has('gui_running')
     set guifont=Lucida_Console:h11:cANSI
     set guioptions=egmrLt
     colors inkpot
+    syntax off
 else
-    "colors ron
+    "colors default
 endif
 
 if has('netbeans_intg')
@@ -55,24 +57,19 @@ map <silent> ,a :set cuc! cul!<CR>
 map <silent> ,l :1,$l#<CR>
 
 " folding
-if has('folding')
-    set foldenable
-    set fdm=indent
-    set fdc=4
-    set fdi=
-    set fdls=99
-endif
+"if has('folding')
+"    set foldenable
+"    set fdm=indent
+"    set fdc=4
+"    set fdi=
+"    set fdls=99
+"endif
 
 " textwidth
 "set textwidth=73
 
-" enable syntax highlighting
-if has('syntax')
-    let perl_fold=1
-    let perl_fold_blocks=1
-
-    syntax enable
-endif
+"let perl_fold=1
+"let perl_fold_blocks=1
 
 if v:version >= 700
     set infercase
