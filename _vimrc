@@ -34,7 +34,7 @@ set hls
 if has('gui_running')
     set mouse=a
     set mousehide
-    set guifont=Lucida_Console:h11:cANSI
+    set guifont=Consolas:h11:cANSI
     set guioptions=egmrLt
     colors inkpot
     syntax off
