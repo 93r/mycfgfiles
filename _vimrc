@@ -15,7 +15,7 @@ behave mswin
 """""""""""""""""""""""""""""""""""""""
 "   my settings -- ma_ko@riseup.net   "
 """""""""""""""""""""""""""""""""""""""
-set ai nu noeb ruler sm smd sw=4
+set ai nu noeb ruler sm smd
 set nobackup
 set noundofile
 set showcmd
