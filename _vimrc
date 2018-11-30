@@ -7,8 +7,6 @@ if has('multi_byte')
 endif
 
 source $VIMRUNTIME/vimrc_example.vim
-"source $VIMRUNTIME/macros/matchit.vim
-"source $VIMRUNTIME/menu.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
@@ -47,8 +45,6 @@ if has('netbeans_intg')
 endif
 
 " my keyboardmacros
-map <F2> :!perl -wc %<CR>
-map <F5> :!perl -w %<CR>
 map <silent> <F11> :diffput<CR>
 map <silent> <F12> :diffget<CR>
 
@@ -56,24 +52,8 @@ map <silent> ,c :let @/ = ""<CR>
 map <silent> ,a :set cuc! cul!<CR>
 map <silent> ,l :1,$l#<CR>
 
-" folding
-"if has('folding')
-"    set foldenable
-"    set fdm=indent
-"    set fdc=4
-"    set fdi=
-"    set fdls=99
-"endif
-
-" textwidth
-"set textwidth=73
-
-"let perl_fold=1
-"let perl_fold_blocks=1
-
-if v:version >= 700
-    set infercase
-endif
+unmap <C-F> " under mswin
+unmap Q " want to 'ex'-mode available (don't ask why)
 
 " use english messages
 lang message c
